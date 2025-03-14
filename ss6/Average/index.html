@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let toan= parseFloat(prompt("Nhập vào điểm toán: "));
+       let li= parseFloat(prompt("Nhập vào điểm lí: "));
+       let hoa= parseFloat(prompt("Nhập vào điểm hóa: "));
+       if (toan <0 || li <0 || hoa < 0) {
+           document.write("yêu cầu số lớn hơn 0");
+       }else {
+           let tbinh = (toan + li + hoa) / 3;
+           document.write("Điểm trung bình là:" + tbinh.toFixed(2) + "<br>");
+       }
+    </script>
+</body>
+</html>
