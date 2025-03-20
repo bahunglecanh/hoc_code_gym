@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let diemKT=parseFloat(prompt("Enter diem kiem tra:"));
+    let diemGK=parseFloat(prompt("Enter diem giua kì: "));
+    let diemCK=parseFloat(prompt("Enter diem cuối kì :"));
+    let hocLuc=diemKT*0.2+diemGK*0.3+diemCK*0.5;
+    if (hocLuc>=8){
+        document.write("Hoc sinh gioi")
+    }else if (hocLuc>=6.5){
+        document.write("Hoc sinh kha")
+    }else if (hocLuc<=5){
+        document.write("Hoc sinh trung binh")
+    }else {
+        document.write("Hoc sinh yeu")
+    }
+</script>
+</body>
+</html>

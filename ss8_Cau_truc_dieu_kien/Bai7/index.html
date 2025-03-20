@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let soPhutGoi = parseInt(prompt("Nhập số phút gọi trong tháng:"));
+    let giaCuocPhut = parseFloat(prompt("Nhập giá cước theo phút :"));
+    let phiThueBao = parseFloat(prompt("Nhập phí thuê bao :"));
+    let phiPhatSinh = parseFloat(prompt("Nhập phí phát sinh :"));
+    let cuocGoi = soPhutGoi * giaCuocPhut;
+    let tongCuoc = phiThueBao + cuocGoi + phiPhatSinh;
+    document.writeln("Cước gọi" + cuocGoi +" đồng\n")
+    document.writeln("Phí thuê bao" + phiThueBao +" đồng\n")
+    document.writeln("Phí phát sinh" + phiPhatSinh +" đồng\n")
+    document.writeln("Tổng là: " + tongCuoc +" đồng")
+</script>
+</body>
+</html>
