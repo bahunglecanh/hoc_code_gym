@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function calculate(canh) {
+        let area=canh * canh;
+        return area;
+    }
+    let canh=Number(prompt("Nhap vao: "))
+    if (canh<=0){
+        alert("Nhap lai cho taoo !!!!")
+    }else {
+        let convert=calculate(canh);
+        document.write("Diện tích hình vuông là: "+convert);
+    }
+</script>
+</body>
+</html>
