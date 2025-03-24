@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let F0 = 0, F1 = 1;
+    let F = 0;
+    let sum=F0+F1;
+
+    for(let i=2;i<20;i++){
+        F = F0 + F1;
+        F0 = F1;
+        F1 = F;
+        sum+=F;
+    }
+    document.write("Tổng 20 số đầu tiên trong fibonacci là: "+sum);
+
+</script>
+</body>
+</html>
