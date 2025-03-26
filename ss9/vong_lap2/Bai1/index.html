@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+<div id="output"></div> <!-- Khu vực để hiển thị kết quả -->
+
+<script>
+    function fibonacci(n) {
+        let a = 0, b = 1;
+        let result = ''; // Khởi tạo một biến để lưu dãy số
+
+        result += a + ' '; // In phần tử đầu tiên
+        for (let i = 1; i < n; i++) {
+            result += b + ' '; // In phần tử tiếp theo
+            let temp = a + b;
+            a = b;
+            b = temp;
+        }
+
+        // Hiển thị dãy số trên trang web
+        document.getElementById('output').textContent = result;
+    }
+
+    let n = 10; // Số lượng phần tử trong dãy Fibonacci
+    fibonacci(n);
+</script>
+</body>
+</html>

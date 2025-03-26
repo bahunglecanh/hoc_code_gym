@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--<script>-->
+<!--    function printTriangle(n) {-->
+<!--        let result = '';-->
+<!--        for (let i = 1; i <= n; i++) {-->
+<!--            result += '* '.repeat(i) + '<br>';-->
+<!--        }-->
+<!--        document.write(result);-->
+<!--    }-->
+
+<!--    printTriangle(5);-->
+<!--</script>-->
+<script>
+    // Tam giác vuông góc tại góc trên bên trái
+    function printTriangleTopLeft(n) {
+        let result = '';
+        for (let i = 1; i <= n; i++) {
+            result += '* '.repeat(i) + '<br>';
+        }
+        document.write(result+'<br>');
+    }
+
+    // Tam giác vuông góc tại góc dưới bên trái
+    function printTriangleBottomLeft(n) {
+        let result = '';
+        for (let i = n; i >= 1; i--) {
+            result += '* '.repeat(i) + '<br>';
+        }
+        document.write(result+'<br>');
+    }
+
+    // Tam giác vuông góc tại góc trên bên phải
+    function printTriangleTopRight(n) {
+        let result = '';
+        for (let i = 1; i <= n; i++) {
+            result += '&nbsp '.repeat(n - i) + '*'.repeat(i) + '<br>';
+        }
+        document.write(result+'<br>');
+    }
+
+    // Tam giác vuông góc tại góc dưới bên phải
+    function printTriangleBottomRight(n) {
+        let result = '';
+        for (let i = n; i >= 1; i--) {
+            result += '&nbsp '.repeat(n - i) + '*'.repeat(i) + '<br>';
+        }
+        document.write(result+'<br>');
+    }
+
+
+
+    // Gọi các hàm với n = 5
+    let n = 5;
+    printTriangleTopLeft(n);
+    printTriangleBottomLeft(n);
+    printTriangleTopRight(n);
+    printTriangleBottomRight(n);
+</script>
+</body>
+</html>
