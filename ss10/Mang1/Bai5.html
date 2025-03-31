@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let a="-5 12 -8 15 -3 22 10 -18 7 -11"
+    let b=a.split(" ");
+    let count=0;
+    for(let i=0;i<b.length;i++){
+        if(b[i]<0){
+            count++;
+        }
+    }
+    document.write("Có "+ count +" Số nguyên âm trong chuỗi");
+</script>
+</body>
+</html>
