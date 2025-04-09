@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tìm Số Nguyên Nhỏ Nhất</h1>
+<button onclick="checkSmallestNumber()">Tìm Số Nhỏ Nhất</button>
+<script>
+    function findSmallestNumber(num1, num2, num3) {
+        return Math.min(num1, num2, num3);
+    }
+
+    function checkSmallestNumber() {
+        let num1 = parseInt(prompt("Nhập số nguyên thứ nhất:"));
+        let num2 = parseInt(prompt("Nhập số nguyên thứ hai:"));
+        let num3 = parseInt(prompt("Nhập số nguyên thứ ba:"));
+
+        let smallest = findSmallestNumber(num1, num2, num3);
+        alert("Số nguyên nhỏ nhất là: " + smallest);
+    }
+</script>
+</body>
+</html>

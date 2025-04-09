@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tính Giai Thừa</h1>
+<button onclick="checkFactorial()">Tính Giai Thừa</button>
+<script>
+    function factorial(num) {
+        if (num < 0) {
+            return "Giai thừa không tồn tại cho số âm!";
+        } else if (num === 0 || num === 1) {
+            return 1;
+        } else {
+            let result = 1;
+            for (let i = 2; i <= num; i++) {
+                result *= i;
+            }
+            return result;
+        }
+    }
+
+    function checkFactorial() {
+        let number = parseInt(prompt("Nhập một số nguyên để tính giai thừa:"));
+
+        if (isNaN(number)) {
+            alert("Vui lòng nhập một số hợp lệ!");
+        } else {
+            let result = factorial(number);
+            alert("Giai thừa của " + number + " là: " + result);
+        }
+    }
+</script>
+</body>
+</html>

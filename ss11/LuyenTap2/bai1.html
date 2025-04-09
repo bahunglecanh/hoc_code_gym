@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tính Bình Phương</h1>
+<button onclick="checkSquare()">Tính Bình Phương</button>
+<script>
+    function squareNumber(num) {
+        return num * num;
+    }
+
+    function checkSquare() {
+        let number = prompt("Nhập một số để tính bình phương:");
+        let result = squareNumber(parseFloat(number));
+        alert("Bình phương của " + number + " là: " + result);
+    }
+</script>
+</body>
+</html>

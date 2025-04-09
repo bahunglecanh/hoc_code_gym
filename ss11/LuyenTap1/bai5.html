@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tìm Chòm Sao</h1>
+<button onclick="resultStart()">Tìm Chòm Sao</button>
+<script>
+    let nameStart=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellations=["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function findStar(nameSt){
+        let index=nameStart.indexOf(nameSt);
+        if(index!==-1){
+            return constellations[index];
+        }else {
+            return "Ngôi sao không được tìm thấy.";
+        }
+    }
+    function resultStart(){
+        let nameStart =prompt("Nhập tên ngôi sao: ");
+        let constellation=findStar(nameStart);
+        alert(constellation);
+
+    }
+</script>
+</body>
+</html>

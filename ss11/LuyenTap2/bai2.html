@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tính Diện Tích và Chu Vi Hình Tròn</h1>
+<button onclick="checkCircleProperties()">Tính Diện Tích và Chu Vi</button>
+<script>
+    function calculateArea(radius) {
+        return Math.PI * radius * radius;
+    }
+
+    function calculateCircumference(radius) {
+        return 2 * Math.PI * radius;
+    }
+
+    function checkCircleProperties() {
+        let radius = parseFloat(prompt("Nhập bán kính của hình tròn:"));
+
+        if (isNaN(radius) || radius <= 0) {
+            alert("Vui lòng nhập một bán kính hợp lệ!");
+            return;
+        }
+
+        let area = calculateArea(radius);
+        let circumference = calculateCircumference(radius);
+
+        alert("Diện tích hình tròn là: " + area);
+        alert("Chu vi hình tròn là: " + circumference);
+    }
+</script>
+</body>
+</html>

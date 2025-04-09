@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Đảo Ngược Mảng</h1>
+<button onclick="checkAndReverse()">Đảo Ngược Mảng</button>
+<script>
+    function reverseArray(arr) {
+        return arr.reverse();
+    }
+
+    function checkAndReverse() {
+        let input = prompt("Nhập một mảng số nguyên, các phần tử cách nhau bởi dấu phẩy (ví dụ: 1,2,3,4):");
+        let arr = input.split(',').map(Number);
+
+        if (arr.some(isNaN)) {
+            alert("Vui lòng nhập một mảng số nguyên hợp lệ!");
+        } else {
+            let reversedArr = reverseArray(arr);
+            alert("Mảng sau khi đảo ngược: " + reversedArr.join(', '));
+        }
+    }
+</script>
+</body>
+</html>

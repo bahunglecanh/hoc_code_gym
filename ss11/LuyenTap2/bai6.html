@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Kiểm Tra Số Nguyên Dương</h1>
+<button onclick="checkPositiveInteger()">Kiểm Tra Số</button>
+<script>
+    function isPositiveInteger(num) {
+        return num > 0 && Number.isInteger(num);
+    }
+
+    function checkPositiveInteger() {
+        let number = parseFloat(prompt("Nhập một số để kiểm tra:"));
+
+        if (isNaN(number)) {
+            alert("Vui lòng nhập một số hợp lệ!");
+        } else {
+            if (isPositiveInteger(number)) {
+                alert("Số đã nhập là số nguyên dương.");
+            } else {
+                alert("Số đã nhập không phải là số nguyên dương.");
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Kiểm Tra Ký Tự Trong Mảng</h1>
+<button onclick="checkCharacter()">Kiểm Tra Ký Tự</button>
+<script>
+    function checkCharacterInArray(arr, char) {
+        let count = arr.filter(item => item === char).length;
+
+        return count > 0 ? count : -1;
+    }
+
+    function checkCharacter() {
+        let inputArray = prompt("Nhập mảng ký tự, các phần tử cách nhau bởi dấu phẩy (ví dụ: a,b,c,d):");
+        let arr = inputArray.split(',');
+        let character = prompt("Nhập ký tự cần kiểm tra:");
+
+        let result = checkCharacterInArray(arr, character);
+
+        if (result === -1) {
+            alert("Ký tự không có trong mảng.");
+        } else {
+            alert("Ký tự '" + character + "' xuất hiện " + result + " lần trong mảng.");
+        }
+    }
+</script>
+</body>
+</html>
