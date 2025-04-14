@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="300"></canvas>
+<script>
+    class Rectangle {
+      constructor(width, height) {
+          this._width = width;
+          this._height = height;
+      }
+
+
+        getAreaRactangle(){
+            return this._height*this._width;
+        }
+        getPaRectangle(){
+            return (this._width+this._height)*2;
+        }
+        draw(ctx) {
+            ctx.fillStyle = "#4fcbee";
+            ctx.fillRect(150, 150, this._width, this._height);
+        }
+
+    }
+    let rectangle=new Rectangle(150,150);
+    var c=document.getElementById("canvas");
+    var ctx=c.getContext("2d");
+    rectangle.draw(ctx);
+    document.write("Diện tích hình chữ nhật: " +rectangle.getAreaRactangle()+" ");
+    document.write("Chu vi hình chữ nhật: " +rectangle.getPaRectangle()+"<br>");
+</script>
+</body>
+</html>
