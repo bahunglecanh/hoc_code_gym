@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1> hệ thống quản lý học viên CODEGYM</h1>
+<p id="display"></p>
+<body>
+<script>
+
+
+    class Student {
+        constructor(id, name, classroom, email,birth,module) {
+            this.id = id;
+            this.name = name;
+            this.classroom =classroom  ;
+            this.email = email;
+            this.birth = birth;
+            this.module = module;
+        }
+
+    }
+    let studentList = [
+        new Student("HV-0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com","01/01/2004",1),
+        new Student("HV-0002", "Nguyễn Văn B", "C1122G1", "nguyenvanb@gmail.com","02/02/2004",1),
+        new Student("HV-0001", "Nguyễn Văn A", "C1222G1", "nguyenvanc@gmail.com","03/03/2004",1),
+    ];
+    display();
+
+    function display() {
+        let tableString = `<table border="1" style="border-collapse:  collapse">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Lớp</th>
+                                    <th>Email</th>
+                                    <th>Ngày sinh</th>
+                                </tr>`;
+        for (let i = 0; i < studentList.length; i++) {
+            tableString += `    <tr>
+                                    <td>${i + 1}</td>
+                                    <td>${studentList[i].id}</td>
+                                    <td>${studentList[i].name}</td>
+                                    <td>${studentList[i].classroom}</td>
+                                    <td>${studentList[i].email}</td>
+                                    <td>${studentList[i].birth}</td>
+
+                                </tr>`;
+        }
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    function deleteStudent(id) {
+        let conf = confirm("bạn có muốn xoá sinh viên này không");
+        if (conf) {
+            for (let i = 0; i < studentList.length; i++) {
+                if (studentList[i].id == id) {
+                    studentList.splice(i, 1);
+                    break;
+                }
+            }
+        }
+        display();
+    }
+
+    function add() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let address = document.getElementById("address").value;
+
+        if (id!=""&&name!=""&&age!=""&&address!=""){
+            let newStudent = new Student(id, name, age, address);
+            studentList.push(newStudent);
+            document.getElementById("id").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("address").value = "";
+        }else {
+            alert("thông tin chưa nhập đủ")
+        }
+
+        display();
+
+    }
+//s
+
+</script>
+</body>
+</html>

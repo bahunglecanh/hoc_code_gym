@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    sum=0;
+    let luong=prompt("Nhập vào lương của bạn: ");
+    if(luong>=15000000){
+        sum=luong*0.2;
+    }else if(luong >=700000&&luong<=15000000){
+        sum=luong*0.1;
+    }else {
+        sum=luong*0.05;
+    }
+    let moneyAfterTax=luong-sum;
+    document.write("Thuế của số tiền "+luong+" của bạn là: "+sum+"<br>"+"Lương bạn nhận được là: "+moneyAfterTax);
+</script>
+</body>
+</html>

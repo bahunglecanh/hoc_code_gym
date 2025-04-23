@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ Tam Giác Vuông Cân Rỗng</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+<h1>Vẽ Tam Giác Vuông Cân Rỗng</h1>
+
+<pre id="triangle"></pre>
+
+<script>
+    function drawHollowTriangle() {
+        const height = parseInt(prompt("Nhập vào chiều cao: "));
+        let result = "";
+
+       for(let i=1;i<=height;i++){
+           let row="";
+           for(let j=1;j<=height;j++){
+               if(j===1||j===i||i===height){
+                   row+="*";
+               }else {
+                   row+=" ";
+               }
+           }
+           result+=row+"\n";
+       }
+        document.getElementById("triangle").innerText = result;
+    }
+
+    drawHollowTriangle();
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        if (num < 2) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    }
+    function list(matrix) {
+        const primeNumbers = [];
+        let count = 0;
+
+        for (let row of matrix) {
+            for (let value of row) {
+                if (isPrime(value)) {
+                    primeNumbers.push(value);
+                    count++;
+                }
+            }
+        }
+
+        document.write("Các số nguyên tố trong mảng:", primeNumbers);
+        document.write("Tổng số lượng số nguyên tố:", count);
+        return { primeNumbers, count };
+    }
+
+    let matrix = [
+        [2, 4, 5],
+        [6, 7, 8],
+        [11, 13, 17]
+    ];
+
+    list(matrix);
+
+</script>
+</body>
+</html>

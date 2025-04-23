@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const menu = [
+        { name: "Cafe", price: 20000 },
+        { name: "Cam vắt", price: 25000 },
+        { name: "Nước ép cà rốt", price: 30000 },
+        { name: "Nước ép cà chua", price: 28000 },
+        { name: "Nước lọc", price: 10000 },
+        { name: "Nước dừa", price: 22000 },
+    ];
+
+    let total = 0;
+    let choice;
+
+    do {
+        let menuText = "Chọn thức uống:\n";
+        for (let i = 0; i < menu.length; i++) {
+            menuText += `${i + 1}. ${menu[i].name} - ${menu[i].price} VND\n`;
+        }
+        menuText += "7. Thoát gọi món";
+        choice = parseInt(prompt(menuText));
+
+        if (choice >= 1 && choice <= 6) {
+            let quantity = parseInt(prompt("Nhập số lượng:"));
+            let item = menu[choice - 1];
+            let cost = quantity * item.price;
+            total += cost;
+            alert(`Bạn đã chọn ${quantity} ly ${item.name} (${item.price} VND/ly)\nThành tiền: ${cost} VND`);
+        } else if (choice !== 7) {
+            alert("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
+        }
+
+    } while (choice !== 7);
+
+    alert("Tổng số tiền bạn cần trả là: " + total + " VND\nCảm ơn bạn đã gọi món!");
+</script>
+</body>
+</html>

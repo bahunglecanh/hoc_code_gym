@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function calculate(a,b){
+        let area=a*b/2;
+        return area;
+    }
+    let a=Number(prompt("Nhap vao: "))
+    let b=Number(prompt("Nhap vao: "))
+    if(a<=0 || b<=0){
+        alert("Nhap lai cho taoo !!!!")
+    }else {
+        let convert=calculate(a,b);
+        document.write("Diện tích tam giác vuông là: "+convert)
+    }
+</script>
+</body>
+</html>

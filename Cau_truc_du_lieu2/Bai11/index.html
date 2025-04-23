@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function tinhThue(thunhap) {
+        let thue = 0;
+        if (thunhap <= 5000000) {
+            thue = thunhap * 0.05;
+        } else if (thunhap <= 10000000) {
+            thue = thunhap * 0.10;
+        } else if (thunhap <= 18000000) {
+            thue = thunhap * 0.15;
+        } else if (thunhap <= 32000000) {
+            thue = thunhap * 0.20;
+        } else if (thunhap <= 52000000) {
+            thue = thunhap * 0.25;
+        } else if (thunhap <= 80000000) {
+            thue = thunhap * 0.30;
+        } else {
+            thue = thunhap * 0.35;
+        }
+        alert("Thuế phải nộp là: "+ thue)
+    }
+    let thuNhap=parseFloat(prompt("Nhập vào thu nhập: "))
+    console.log(tinhThue(thuNhap))
+</script>
+</body>
+</html>

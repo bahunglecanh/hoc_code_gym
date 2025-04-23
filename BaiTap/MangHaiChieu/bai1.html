@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function sumEvenMatrixElements() {
+        const m = parseInt(prompt("Nhập số hàng :"));
+        const n = parseInt(prompt("Nhập số cột :"));
+
+        const matrix = [];
+        let sum = 0;
+
+        for (let i = 0; i < m; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < n; j++) {
+                const value = parseInt(prompt(`Nhập phần tử tại [${i}][${j}]:`));
+                matrix[i][j] = value;
+
+                if (value % 2 === 0) {
+                    sum += value;
+                }
+            }
+        }
+
+        console.log("Ma trận đã nhập:");
+        document.write(matrix);
+        document.write("Tổng các số chẵn trong ma trận là:", sum);
+        return sum;
+    }
+
+    // Gọi hàm
+    sumEvenMatrixElements();
+
+</script>
+</body>
+</html>

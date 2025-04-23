@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function chuanHoaChuoi(str) {
+        str = str.trim().toLowerCase();
+
+        let words = str.split(/\s+/);
+
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+        }
+
+        return words.join(" ");
+    }
+
+    function timTuDaiNhat(str) {
+        let words = str.split(" ");
+        let maxWord = words[0];
+
+        for (let i = 1; i < words.length; i++) {
+            if (words[i].length > maxWord.length) {
+                maxWord = words[i];
+            }
+        }
+
+        return maxWord;
+    }
+
+    function main() {
+        let input = prompt("Nhập chuỗi:");
+        document.write("Chuỗi ban đầu: ", input);
+
+        let chuanHoa = chuanHoaChuoi(input);
+        document.write("\nChuỗi sau chuẩn hóa:\n", chuanHoa);
+
+        let tuDaiNhat = timTuDaiNhat(chuanHoa);
+        document.write("\nTừ dài nhất:", tuDaiNhat);
+    }
+
+    main();
+
+</script>
+</body>
+</html>

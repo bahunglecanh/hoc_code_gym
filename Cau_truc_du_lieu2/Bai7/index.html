@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function pTrinhBac2(a,b,c) {
+        let delta=b*b-4*a*c;
+        if (a === 0) {
+            if (b === 0) {
+               if (c === 0) {
+                   alert("Phương trình vô số nghiệm")
+               }else {
+                   alert("Phương trình vô nghiệm")
+               }
+            } else {
+                let x = -c / b;
+                document.write("Phương trình bậc 1, nghiệm là x="+x)
+            }
+        }else {
+            if (delta < 0) {
+                document.write("Phương trình vô nghiệm")
+            }else if (delta == 0) {
+                let x=-b/2*a;
+                document.write("Phương trình có 1 nghiệm kép x1=x2"+x)
+            }else  {
+                let x1=(-b+Math.sqrt(delta))/2*a;
+                let x2=(-b-Math.sqrt(delta))/2*a;
+                document.write("Phương trình có 2 nghiệm phân biệt x1= "+ x1 +" x2 = " + x2);
+            }
+        }
+    }
+    let a=Number(prompt("Enter a "));
+    let b=Number(prompt("Enter b "));
+    let c=Number(prompt("Enter c "));
+    console.log(pTrinhBac2(a,b,c));
+
+</script>
+</body>
+</html>
